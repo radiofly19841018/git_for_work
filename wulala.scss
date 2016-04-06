@@ -1,0 +1,377 @@
+<style>
+#orders-info-page {
+  .vertical-mid {
+    display: inline-block;
+    height: 100%;
+    width: 0;
+    vertical-align: middle;
+  }
+  .grid-container{
+    padding: 0;
+  }
+  .color-yellow{
+    color: #ff8400;
+  }
+  .color-white{
+    color: #ffffff;
+  }
+  .no-border{
+    border: none;
+  }
+  .cars-info {
+    padding-top: 1.2rem;
+    padding-bottom: .7rem;
+    background-size: .7rem .7rem;
+    .height-1rem{
+      height: 1rem;
+    }
+    .cars-info-inner {
+      background-color: #ffffff;
+      padding: 0 1.5rem;
+      .cars-imgInfo {
+        border-bottom: 1px solid $color-border-gray;
+        >div{
+          padding: 0;
+          height: 8rem;
+          overflow: hidden;
+          .img-box{
+            text-align: center;
+            height: 100%;
+            img {
+              vertical-align: middle;
+              max-height: 100%;
+              max-width: 90%;
+            }
+          }
+          h3 {
+            margin: 0 0 .6rem;
+            color: #454440;
+            font-weight: normal;
+            font-size: 1.7rem
+          }
+          p {
+            margin: 0;
+            font-size: 1.1rem;
+            color: #454440;
+          }
+          .text-box {
+            width: 90%;
+            display: inline-block;
+            vertical-align: middle;
+          }
+        }
+      }
+      .cars-getTime{
+        position: relative;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid $color-border-gray;
+        >div{
+          height: 6.6rem;
+          padding-left: 0;
+          padding-right: 0;
+          &.over-cars-getTime{
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding-top: 1.5rem;
+            width: 100%;
+            .round-box-border{
+              position: relative;
+              left: 1px;
+              height: 1.3rem;
+              width: 50%;
+              border-right: 2px solid $color-default;
+            }
+            .round-box{
+              margin: 0 auto;
+              padding-top: .6rem;
+              width: 4rem;
+              height: 4rem;
+              border-radius: 3.5rem;
+              border: 1px solid $color-border-yellow;
+              font-size: 1.1rem;
+              text-align: center;
+              color: $color-default;
+              p{
+                margin: 0;
+                line-height: 1.4rem;
+                height: 2.8rem;
+                span{
+                  &.color-yellow{
+                    position: relative;
+                    top: .1rem;
+                    font-size: 1.1rem;
+                    color: $color-primary;
+                  }
+                }
+              }
+            }
+          }
+          p {
+            &.cars-time{
+              margin: 0 0 1.5rem;
+              font-size: 1.4rem;
+              color: $color-default;
+            }
+            &.cars-time-info{
+              margin: 0;
+              font-size: 1.7rem;
+              line-height: 1.9rem;
+              color: #262729;
+              span{
+                font-size: 1.4rem;
+                color: #4a4a4a;
+              }
+            }
+          }
+          &.left-parts{
+            p{
+              padding-right: 2.5rem;
+            }
+
+          }
+          &.right-parts{
+            p{
+              padding-left: 2.5rem;
+            }
+
+          }
+        }
+      }
+      .cars-address{
+        .grid-container{
+          padding: .9rem;
+          border-bottom: 1px solid $color-border-gray;
+          p{
+            display: inline-block;
+            padding: 0 1rem 0 2rem;
+            margin: 0;
+            width: 75%;
+            line-height: 2.5rem;
+            font-size: 1.5rem;
+            vertical-align: middle;
+            &.address-tit{
+              padding: 0;
+              width: 24%;
+              font-size: 1.4rem;
+              border-right: 1px solid $color-border-gray;
+            }
+          }
+        }
+      }
+    }
+  }
+  .user-info{
+    .user-tit{
+      padding: 0 1.5rem;
+      p{
+        padding: 0;
+        margin: 0;
+        font-size: 1.7rem;
+        color: #454440;
+        line-height: 5rem;
+      }
+    }
+    .user-info-list{
+      padding: 0 1.5rem;
+      border-top: 1px solid $color-border-gray;
+      border-bottom: 1px solid $color-border-gray;
+      background-color: #ffffff;
+      .user-info-inner{
+        padding: 1rem 0;
+        height: 4.5rem;
+        border-bottom: 1px solid $color-border-gray;
+        font-size: 1.4rem;
+        &:last-of-type{
+          border: none;
+        }
+        p{
+          display: inline-block;
+          margin: 0;
+          height: 2.5rem;
+          line-height: 2.5rem;
+          vertical-align: middle;
+          &.user-info-left{
+            width: 30%;
+            text-indent: 1.2rem;
+          }
+          &.user-info-right{
+            width: 60%;
+            text-indent: .5rem;
+          }
+        }
+      }
+    }
+  }
+  .cost-info{
+    .cost-tit{
+      padding: 0 1.5rem;
+      p{
+        padding: 0;
+        margin: 0;
+        font-size: 1.7rem;
+        color: #454440;
+        line-height: 5rem;
+        .text-right{
+          font-size: 1.6rem;
+          span{
+            position: relative;
+            top: .1rem;
+          }
+        }
+      }
+    }
+    .cost-lease{
+      background-color: #ffffff;
+      .cost-lease-tit{
+        padding: 0 1.5rem;
+        &.grid-container{
+          p{
+            padding: 0;
+            font-size: 1.4rem;
+            span{
+              &.color-yellow{
+                font-size: 1.3rem;
+              }
+              &.icon{
+                transform:rotate(90deg);
+              }
+            }
+          }
+        }
+        p{
+          font-size: 1.4rem;
+          span{
+            &.color-yellow{
+              font-size: 1.3rem;
+            }
+            &.icon{
+              transform:rotate(90deg);
+            }
+          }
+        }
+      }
+      .cost-lease-info{
+        height: 0;
+        overflow: hidden;
+        table{
+          width: 100%;
+          text-align: center;
+          font-size: 1.2rem;
+          th{
+            padding-top: .5rem;
+            line-height: 1.9rem;
+            border-top: 1px solid $color-border-gray;
+          }
+          td{
+            border: 1px solid $color-border-gray;
+            &.active{
+              background-color: $color-bg-yellow;
+            }
+          }
+          p{
+            margin: .25rem 0;
+            line-height: 1.5rem;
+            span{
+              color: $color-default;
+            }
+          }
+        }
+        .grid-container{
+          padding: 0;
+          margin: 0 1.5rem;
+          color: #303030;
+          border-bottom: 1px solid $color-border-gray;
+          &.no-margin{
+            margin: 0;
+            padding: 0 1.5rem;
+          }
+          p{
+            padding: 0;
+            margin: 0;
+            line-height: 4.5rem;
+            font-size: 1.4rem;
+          }
+        }
+      }
+      &.active{
+        .cost-lease-info{
+          height: auto;
+        }
+      }
+    }
+    .cost-deposit{
+      .cost-deposit-tit{
+        padding: 0 1.5rem;
+        height: 4.2rem;
+        &.grid-container{
+          p{
+            padding: 0;
+            margin: 0;
+            line-height: 4.2rem;
+            font-size: 1.7rem;
+          }
+        }
+      }
+      .cost-deposit-info{
+        .grid-container{
+          padding: 0 1.5rem;
+          border-bottom: 1px solid $color-border-gray;
+          color: #303030;
+          background-color: #ffffff;
+          p{
+            padding: 0;
+            margin: 0;
+            line-height: 4.5rem;
+            font-size: 1.4rem;
+          }
+        }
+      }
+      .cost-deposit-note{
+        margin: 0;
+        padding: .7rem .8rem;
+        font-size: 1.1rem;
+        line-height: 1.3rem;
+        color: #ca4341;
+        background-color: #ffffff;
+      }
+    }
+  }
+  .coupon-info{
+    margin-top: .9rem;
+    margin-bottom: 5rem;
+    background-color: #ffffff;
+    .coupon-info-tit{
+      padding: 0 1.5rem;
+      p{
+        padding: 0;
+        margin: 0;
+        font-size: 1.7rem;
+        color: #454440;
+        line-height: 5rem;
+        .text-right{
+          font-size: 1.6rem;
+          span{
+            position: relative;
+            top: .1rem;
+          }
+        }
+      }
+    }
+  }
+  .order-submit{
+    height: 5rem;
+    line-height: 5rem;
+    background-color: #72716e;
+    font-size: 1.5rem;
+    p{
+      padding: 0 1.5rem;
+      margin: 0;
+      &.order-submit-btn{
+        background-color: #f3b90f;
+      }
+    }
+  }
+}
+</style>
